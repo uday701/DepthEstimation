@@ -15,6 +15,7 @@ import torch.nn.init as init
 
 import sys
 sys.path.append('/data0/kexian/Code/kxian_Adobe/MPO_edgeGuidedRanking/models/syncbn')
+sys.path.insert(0,"./syncbn")
 from modules import nn as NN
 
 import resnet
