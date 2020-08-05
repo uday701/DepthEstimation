@@ -5,8 +5,8 @@ import torchvision
 
 import sys
 sys.path.append('/data0/kexian/Code/kxian_Adobe/MPO_edgeGuidedRanking/models/syncbn')
-from modules import nn as NN
-
+sys.path.insert(0,"models/syncbn/modules")
+import nn as NN
 
 __all__ = ['ResNet', 'resnet18', 'resnet34', 'resnet50', 'resnet101',
            'resnet152']
