@@ -117,10 +117,10 @@ class AO(nn.Module):
         self.outchannels = outchannels
         self.upfactor = upfactor
 
-        self.adapt_conv = nn.Sequential(nn.Conv2d(in_channels=self.inchannels, out_channels=self.inchannels/2, kernel_size=3, padding=1, stride=1, bias=True),\
-                                  NN.BatchNorm2d(num_features=self.inchannels/2),\
+        self.adapt_conv = nn.Sequential(nn.Conv2d(in_channels=self.inchannels, out_channels=self.inchannels//2, kernel_size=3, padding=1, stride=1, bias=True),\
+                                  NN.BatchNorm2d(num_features=self.inchannels//2),\
                                   nn.ReLU(inplace=True),\
-                                  nn.Conv2d(in_channels=self.inchannels/2, out_channels=self.outchannels, kernel_size=3, padding=1, stride=1, bias=True),\
+                                  nn.Conv2d(in_channels=self.inchannels//2, out_channels=self.outchannels, kernel_size=3, padding=1, stride=1, bias=True),\
                                        nn.Upsample(scale_factor=self.upfactor, mode='bilinear', align_corners=True))
 
         self.init_params()
