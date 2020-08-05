@@ -11,7 +11,8 @@ import torch.nn as nn
 import torch.nn.init as init
 import sys
 sys.path.append('/data0/kexian/Code/kxian_Adobe/MPO_edgeGuidedRanking/models/syncbn')
-import modules.nn as NN
+sys.path.insert(0,"models/syncbn/modules")
+import nn as NN
 
 # ==============================================================================================================
 
